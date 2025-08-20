@@ -1,0 +1,1170 @@
+:root {
+  --main-color: rgb(255, 0, 0);
+  --black: #000000;
+  --white: #fff;
+  --grey: #ddd;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: 0;
+  outline: 0;
+  transition: all 0.3s linear;
+}
+
+*::selection {
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  background-color: var(--black);
+  min-height: 500vh;
+}
+
+section {
+  padding: 2rem 5%;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+
+/* global css style end */
+
+/* heading CSS style start */
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.heading h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: var(--main-color);
+  font-size: 4rem;
+}
+
+.heading h3 span {
+  position: relative;
+  z-index: 0;
+  color: var(--white);
+}
+
+.heading h3 span::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  z-index: -1;
+  background: var(--main-color);
+  height: 0.2rem;
+  width: 80%;
+  margin-left: 10%;
+}
+
+/* heading CSS style end */
+
+/* button CSS style start */
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  color: var(--white);
+  background-color: transparent;
+  border: 0.1rem solid var(--main-color);
+  font-size: 1.6rem;
+  font-weight: 800;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: var(--main-color);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn::before {
+  top: 0;
+  left: 0;
+}
+
+.btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.btn:hover {
+  color: var(--main-color);
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 0;
+}
+
+/* button CSS style end */
+
+/* header section start */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: all.5s linear;
+  z-index: 999;
+}
+
+header.active {
+  border-bottom: 0.1rem solid var(--grey);
+  background: #343333;
+}
+
+header .logo h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--main-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+header .navbar a {
+  color: var(--white);
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+header .navbar a:hover,
+header .navbar a.active {
+  color: var(--main-color);
+}
+
+header #menu-btn {
+  font-size: 3rem;
+  color: var(--white);
+  cursor: pointer;
+  display: none;
+}
+
+header .fa-times {
+  transform: rotate(180deg);
+}
+
+header #menu-btn:hover {
+  color: var(--main-color);
+}
+
+/* смена языки */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  font-size: 23px;
+  color: dodgerblue;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* тема светло */
+
+.theme-toggle-btn {
+  font-size: 2.4rem;
+  color: var(--white);
+  cursor: pointer;
+  margin-left: 2rem;
+}
+.theme-toggle-btn:hover {
+  color: var(--main-color);
+}
+
+body.light-theme {
+  --black: #ffffff;
+  --white: #000000;
+  --grey: #333;
+}
+
+/* 🌙 Тёмная тема (по умолчанию) */
+.box {
+  background: #fff; /* Тёмный фон */
+  color: #000; /* Белый текст */
+  border: 1px solid #444;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/* ☀️ Светлая тема */
+body.light-theme .box {
+  background: #000; /* Светлый фон */
+  color: #fff; /* Чёрный текст */
+  border: 1px solid #aaa;
+}
+
+/* header section end */
+
+/* home section start */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  header #menu-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    width: 23rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 0rem 2rem;
+    background: var(--white);
+    border: 0.1rem solid var(--grey);
+    transition: 0.2s linear;
+    transform: translateX(100%);
+    height: 50rem;
+    overflow-y: auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  .header .navbar.active {
+    transform: translateX(0);
+  }
+
+  .header .navbar a {
+    display: block;
+    color: var(--black);
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+  }
+
+  section,
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  section,
+  header {
+    padding: 1rem;
+  }
+}
+
+.home {
+  padding: 0rem 5%;
+  background-color: var(--black);
+  min-height: 100vh;
+}
+
+.home .box-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.home .home-content {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.home .home-img {
+  text-align: center;
+  flex: 1 1 40rem;
+}
+
+.home .home-img img {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.home .home-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.home .home-content h1 {
+  color: var(--white);
+  font-size: 4rem;
+  padding: 1rem 0rem;
+}
+
+.home .home-content h1 span {
+  color: var(--main-color);
+}
+
+.home .home-content h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.css-words-anim {
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1.4; /* важно для расчёта высоты */
+  display: flex;
+  align-items: baseline; /* текст строго на линии */
+}
+.words-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 18ch; /* или подбери под своё самое длинное слово */
+  height: 1.2em; /* высота строки */
+  vertical-align: baseline;
+  margin-left: 18px;
+}
+.words-wrapper b {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  animation: wordAnim 12s steps(1) infinite;
+  transform: scale(1);
+}
+
+.css-words-anim {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.words-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 18ch;
+  height: 1em;
+  vertical-align: bottom;
+  margin-left: 18px;
+}
+.words-wrapper b {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  animation: wordAnim 6s steps(1) infinite;
+  transform: scale(1); /* можно убрать второе объявление! */
+}
+
+.words-wrapper b:nth-child(1) {
+  color: #00aaff;
+  animation-delay: 0s;
+}
+.words-wrapper b:nth-child(2) {
+  color: #ff0000;
+  animation-delay: 2s;
+}
+.words-wrapper b:nth-child(3) {
+  color: #91ff00;
+  animation-delay: 4s;
+}
+
+@keyframes wordAnim {
+  0% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.home .home-content p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--white);
+  padding-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* home section end */
+
+/* about section start */
+
+.about .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .img {
+  width: 32rem;
+  text-align: center;
+}
+
+.about .img img {
+  width: 100%;
+  border: 1rem solid;
+}
+
+.about .content {
+  flex: 1 1 55rem;
+}
+
+.about .content h2 {
+  font-size: 3rem;
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
+.about .content h2 span {
+  color: var(--main-color);
+}
+
+.about .content p {
+  font-size: 1.6rem;
+  color: var(--grey);
+  padding-bottom: 1rem;
+}
+
+.about .content .about-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about .content .about-info .info {
+  flex: 1 1 15rem;
+}
+
+.about .content .about-info .info h4 {
+  font-size: 1.6rem;
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
+.about .content .about-info .info h4 span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+.about .content .about-info .info .btn {
+  margin-top: 1rem;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1 1 35rem;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.numbers .box {
+  flex: 0 1 18rem;
+  text-align: center;
+  background: var(--white);
+  padding: 2rem;
+}
+
+.numbers .box h4 {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+.numbers .box h3 {
+  font-size: 1.4rem;
+}
+
+.skill-container {
+  padding: 2rem 0rem;
+}
+
+.skill-container .heading {
+  margin-bottom: 2rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills .skill-item {
+  flex: 1 1 30rem;
+  margin-right: 1.5rem;
+}
+
+.skills .skill-item .item {
+  padding: 1rem 0rem;
+}
+
+.skills .skill-item .item h3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0rem;
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+.skills .skill-item .item .progress-bar {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 5rem;
+}
+
+.skills .skill-item .item .progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.skill-item.item-1 .item:nth-child(1) .progress-bar span {
+  width: 95%;
+  background-color: dodgerblue;
+}
+.skill-item.item-1 .item:nth-child(2) .progress-bar span {
+  width: 90%;
+  background-color: dodgerblue;
+}
+.skill-item.item-1 .item:nth-child(3) .progress-bar span {
+  width: 85%;
+  background-color: dodgerblue;
+}
+.skill-item.item-2 .item:nth-child(1) .progress-bar span {
+  width: 80%;
+  background-color: dodgerblue;
+}
+.skill-item.item-2 .item:nth-child(2) .progress-bar span {
+  width: 75%;
+  background-color: dodgerblue;
+}
+.skill-item.item-2 .item:nth-child(3) .progress-bar span {
+  width: 60%;
+  background-color: dodgerblue;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: stretch;
+  margin: 2rem 0 0 0;
+}
+
+.timeline-card {
+  background: #292929;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeInUp 1s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.timeline-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.timeline-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.timeline-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--main-color, #ff3c3c);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.1);
+}
+.timeline-content span {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: var(--main-color, #ff3c3c);
+  background: #fff;
+  border-radius: 1.1rem;
+  padding: 0.2rem 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+.timeline-content h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.timeline-content p {
+  color: #ccc;
+  font-size: 1.22rem;
+  line-height: 1.7;
+  margin: 0.4rem 0 0 0;
+}
+@media (max-width: 900px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+  .timeline-card {
+    max-width: 98vw;
+  }
+}
+
+.qualification-container .box-container .experience {
+  flex: 1 1 40rem;
+}
+
+/* about section end */
+
+/* services section start */
+
+.services .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.services .box-container .service-item {
+  flex: 1 1 35rem;
+  background-color: var(--black);
+  padding: 4rem 3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.services .box-container .service-item::before {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transform: scale(0);
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.services .box-container .service-item:hover::before {
+  transform: scale(3);
+}
+
+.services .box-container .service-item i {
+  color: var(--white);
+  font-size: 4rem;
+}
+
+.services .box-container .service-item h3 {
+  padding: 1.5rem 0rem;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.services .box-container .service-item p {
+  color: var(--grey);
+  font-size: 1.6rem;
+}
+
+.heading h3 {
+  color: var(--white);
+}
+
+/* services section end */
+
+/* portfolio section start  */
+
+.portfolio-container .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio-container .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 0.5rem;
+  padding: 2rem 0rem;
+}
+
+.portfolio-container .gallery-container .gallery-item {
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.portfolio-container .gallery-container .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-container .gallery-container .gallery-item .content {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(0);
+}
+
+.portfolio-container .gallery-container .gallery-item .content h4 {
+  font-size: 2rem;
+  color: var(--main-color);
+  padding-bottom: 1rem;
+}
+
+.portfolio-container .gallery-container .gallery-item .content p {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+.portfolio-container .gallery-container .gallery-item .content .open-btn {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-top: 1.5rem;
+}
+
+.portfolio-container .gallery-container .gallery-item:hover .content {
+  transform: scale(1);
+}
+
+/* portfolio section end  */
+
+/* review section start */
+
+.review .review-slider {
+  position: relative;
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+
+.review-item {
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  width: 43rem;
+  margin-right: 2rem;
+}
+
+.review-item img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 0.5rem solid var(--main-color);
+  object-fit: cover;
+}
+
+.review-item i {
+  display: block;
+  font-size: 3rem;
+  color: var(--white);
+  margin: 1rem 0rem;
+}
+
+.review-item p {
+  font-size: 1.6rem;
+  color: var(--grey);
+}
+
+.review-item .person-info {
+  margin: 1rem 0rem;
+}
+
+.review-item .person-info h3 {
+  font-size: 1.7rem;
+  font-style: 2rem;
+  color: var(--white);
+  padding-bottom: 0.5rem;
+}
+
+.review-item .person-info h5 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
+
+/* review section end */
+
+/* contact section start */
+.contact .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact .contact-info {
+  flex: 1 1 42rem;
+}
+
+.contact .contact-info h3 {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.contact .contact-info p {
+  font-size: 1.6rem;
+  color: var(--grey);
+  padding: 0.5rem 0rem;
+}
+
+.contact .contact-info .info-item {
+  padding: 1rem 0rem;
+}
+
+.contact .contact-info .info-item h4 {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.contact .contact-info .info-item .detail {
+  display: flex;
+  align-items: center;
+}
+
+.contact .contact-info .info-item .detail i {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  padding-right: 0.5rem;
+}
+
+.contact .contact-info .info-item .detail a {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.contact .contact-form {
+  flex: 1 1 42rem;
+}
+
+.contact .contact-form .box {
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0.5rem 0rem;
+}
+
+.contact .contact-form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+/* contact section end */
+
+/* footer start */
+
+footer {
+  background-color: var(--white);
+  padding: 2rem 0rem;
+  text-align: center;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem;
+}
+
+footer .social a {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0.5rem;
+}
+
+footer .copyright {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+footer .copyright p {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+/* scroll top button  */
+
+footer .copyright p span {
+  font-weight: 800;
+}
+
+/* footer end */
+
+/* responsive CSS style start */
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+    height: 56px;
+  }
+  body {
+    padding-top: 56px;
+  }
+
+  /* Главная секция (home) */
+  .home {
+    padding: 1rem 0.5rem;
+    min-height: auto;
+  }
+  .home .box-container {
+    flex-direction: column;
+    gap: 2rem;
+    min-height: unset;
+  }
+  .home .home-content h1,
+  .css-words-anim {
+    font-size: 2.2rem;
+    word-break: break-word;
+    line-height: 1.1;
+  }
+  .home .home-content h2 {
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+  }
+  .home .home-content p {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+  .home .home-img img {
+    width: 80vw;
+    height: auto;
+    max-width: 200px;
+  }
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .words-wrapper {
+    width: 12ch;
+    font-size: 1em;
+    margin-left: 8px;
+  }
+}
+
+.animated-border {
+  position: relative;
+  width: 32rem;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #ffeb00,
+    #47ff00,
+    #00ffee,
+    #2b65ff,
+    #8000ff,
+    #ff0080,
+    #ff0000
+  );
+  background-size: 300% 300%;
+  animation: animatedBorder 6s linear infinite;
+}
+
+.animated-border img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 5px solid #111;
+  background-color: #111;
+}
+
+@keyframes animatedBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Somon Karimzoda буквы анимаци будет разние свет */
+.rainbow-text {
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ffa500,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #800080,
+    #ff0000
+  );
+  background-size: 300% 300%;
+  font-weight: bold;
+
+  /* ✅ Вот эта часть вызывает "ложную ошибку" в редакторе */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rainbowMove 5s ease infinite;
+}
+
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Цвет для "I Am a" синхронно со словами (6s цикл) */
+.home .home-content h1 .iam-anim {
+  animation: iamColor 6s linear infinite;
+  /* перекрываем общее правило, которое красит все <span> в h1 */
+  color: #fff;
+}
+
+/* 0–33%: синий, 33–66%: красный, 66–100%: зелёный */
+@keyframes iamColor {
+  0%,
+  33% {
+    color: #00aaff;
+  } /* как 1-е слово */
+  33.01%,
+  66% {
+    color: #ff0000;
+  } /* как 2-е слово */
+  66.01%,
+  100% {
+    color: #91ff00;
+  } /* как 3-е слово */
+}

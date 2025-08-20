@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio $omon</title>
+
+    <!-- custom style css link  -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- смена языка -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- font CSS link  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- fontawesome CSS link  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- magnific-popup link css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+    />
+
+    <!-- swiper link css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+
+    <!-- иконка Instagram -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- header section start -->
+
+    <header class="header">
+      <a href="#home" class="logo">
+        <h2 id="Portfolio" data-key="Portfolio">Portfolio.</h2>
+      </a>
+
+      <nav class="navbar">
+        <a data-key="home" href="#home" class="active">Home</a>
+        <a data-key="about" href="#about">About</a>
+        <a data-key="services" href="#services">Services</a>
+        <a data-key="portfolio" href="#portfolio">Portfolio</a>
+        <a data-key="testimonials" href="#testimonials">Testimonials</a>
+        <a data-key="contact" href="#contact">Contact</a>
+      </nav>
+
+      <div class="fas fa-bars" id="menu-btn"></div>
+
+      <!-- глобус смена языки -->
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-globe"></i></button>
+        <div class="dropdown-content">
+          <a href="#" onclick="changeLanguage('en')">English</a>
+          <a href="#" onclick="changeLanguage('ru')">Русский</a>
+          <a href="#" onclick="changeLanguage('tj')">Тоҷикӣ</a>
+        </div>
+      </div>
+
+      <!-- тема светло темный -->
+      <div class="theme-toggle-btn" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </div>
+    </header>
+
+    <!-- header section end -->
+
+    <!-- header section start -->
+
+    <section class="home" id="home">
+      <div class="box-container">
+        <div class="home-content">
+          <div class="content">
+            <h2
+              id="big-hello"
+              data-key="big-hello"
+              class="big-hello css-rainbow-hello"
+            >
+              Hello!
+            </h2>
+
+            <h1 id="css-words-anim" class="css-words-anim">
+              <span class="iam-anim" data-key="i-am-a">I Am a</span>
+              <span class="words-wrapper">
+                <b data-key="word-web-dev">Web Developer</b>
+                <b data-key="word-web-des">Web Designer</b>
+                <b data-key="word-freelancer">Freelancer</b>
+              </span>
+            </h1>
+
+            <p data-key="about-text">
+              Frontend Developer. My stack includes HTML, CSS, JavaScript,
+              TypeScript, React, Next.js
+            </p>
+
+            <a href="#about" class="btn">
+              <span data-key="about-me">About me</span>
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="home-img">
+          <img src="img/home-img.png" alt="web" />
+        </div>
+      </div>
+    </section>
+
+    <!-- home section end -->
+
+    <!-- about section start -->
+
+    <section class="about" id="about">
+      <div class="heading">
+        <h3>
+          <span data-key="about">About</span> <span data-key="me">me</span>
+        </h3>
+      </div>
+
+      <div class="box-container">
+        <div class="img animated-border">
+          <img src="img/home-img.png" alt="about image" />
+        </div>
+
+        <div class="content">
+          <h2>
+            <span data-key="my-name-is">My name is</span>
+            <span class="rainbow-text" data-key="my-name">Somon Karimzoda</span>
+          </h2>
+          <p data-key="about-paragraph">
+            I am a frontend developer specializing in building modern, scalable
+            web applications. My stack includes HTML, CSS, JavaScript,
+            TypeScript, React, Next.js. I am constantly learning and strive to
+            develop as a frontend developer.
+          </p>
+
+          <div class="about-info">
+            <div class="info">
+              <h4>
+                <span data-key="age">Age:</span>
+                <span data-key="age-value">27</span>
+              </h4>
+              <h4>
+                <span data-key="language">Language:</span>
+                <span data-key="language-value">English Russian Tajik</span>
+              </h4>
+              <h4>
+                <span data-key="work">Work:</span>
+                <span data-key="work-value">Frontend Developer</span>
+              </h4>
+              <h4>
+                <span data-key="freelance">Freelance:</span>
+                <span data-key="freelance-value">available</span>
+              </h4>
+              <a href="Resume.docx" class="btn" download>
+                <span data-key="download-cv">Download CV</span>
+                <i class="fas fa-download"></i>
+              </a>
+            </div>
+            <div class="numbers"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- about section end -->
+
+      <!-- Skill section start -->
+
+      <div class="skill-container">
+        <div class="heading">
+          <h3>
+            <span data-key="my">My</span>
+            <span data-key="skills">skills</span>
+          </h3>
+        </div>
+
+        <div class="skills">
+          <div class="skill-item item-1">
+            <div class="item">
+              <h3>HTML5 <span>95%</span></h3>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>CSS3 <span>90%</span></h3>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>JavaScript <span>85%</span></h3>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills">
+          <div class="skill-item item-2">
+            <div class="item">
+              <h3>TypeScript <span>80%</span></h3>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>React <span>75%</span></h3>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Next.js <span>60%</span></h3>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skill section end -->
+
+    <!-- services section start -->
+
+    <section class="services" id="services">
+      <div class="heading">
+        <h3 data-key="my-services">My Services</h3>
+      </div>
+
+      <div class="box-container">
+        <div class="service-item">
+          <i class="fas fa-code"></i>
+          <h3 data-key="web-development"></h3>
+          <p data-key="web-development-desc"></p>
+        </div>
+
+        <div class="service-item">
+          <i class="fas fa-paint-brush"></i>
+          <h3 data-key="ui-ux-design">UI/UX Design</h3>
+          <p data-key="ui-ux-design-desc">
+            I create modern, intuitive, and visually appealing website designs
+            focused on user experience and brand identity. My process includes
+            designing user interfaces in Figma and Adobe XD, ensuring your site
+            stands out and engages your audience from the first click.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <i class="fas fa-user-tie"></i>
+          <h3 data-key="freelancer">Freelancer</h3>
+          <p data-key="freelancer-desc">
+            As a freelancer, I provide flexible, client-oriented solutions to
+            help businesses achieve their goals. I handle projects end-to-end —
+            from concept and design to deployment. You can count on transparent
+            communication, meeting deadlines, and top-quality results. Let’s
+            bring your vision to life together!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section end -->
+
+    <!-- portolio section start -->
+
+    <section class="portfolio" id="portfolio">
+      <div class="heading">
+        <h3 data-key="my-portfolio">My portfolio</h3>
+      </div>
+
+      <div class="portfolio-container">
+        <ul class="controls">
+          <li data-key="button-all" class="button btn" data-filter="all">
+            All
+          </li>
+          <li
+            data-key="button-web-development"
+            class="button btn"
+            data-filter="web"
+          >
+            Web Development
+          </li>
+          <li data-key="button-design" class="button btn" data-filter="design">
+            Web Designer
+          </li>
+          <li
+            data-key="button-freelancer"
+            class="button btn"
+            data-filter="photo"
+          >
+            Freelancer
+          </li>
+        </ul>
+
+        <div class="gallery-container">
+          <div class="gallery-item img web">
+            <img src="img/p-1.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-development">Web Development</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+              <a
+                href="img/p-1.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img web">
+            <img src="img/p-2.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-development">Web Development</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+              <a
+                href="img/p-2.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img web">
+            <img src="img/p-3.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-development">Web Development</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+              <a
+                href="img/p-3.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img design">
+            <img src="img/p-4.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-design">UI/UX Design</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+
+              <a
+                href="img/p-4.jpg"
+                class="open-btn"
+                data-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img design">
+            <img src="img/p-5.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-development">Web Development</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+              <a
+                href="img/p-5.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img design">
+            <img src="img/p-6.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-design">UI/UX Design</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+
+              <a
+                href="img/p-6.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img photo">
+            <img src="img/p-7.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="web-design">UI/UX Design</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+
+              <a
+                href="img/p-7.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item img photo">
+            <img src="img/p-8.jpg" alt="photo" />
+            <div class="content">
+              <h4 data-key="freelancer">Freelancer</h4>
+              <p data-key="portfolio-project">Portfolio project</p>
+
+              <a
+                href="img/p-8.jpg"
+                class="open-btn"
+                daya-effect="mfp-newspaper"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portolio section end -->
+
+    <!-- review section start -->
+
+    <section class="review" id="testimonials">
+      <div class="heading">
+        <h3>
+          <span data-key="review">Review</span>
+        </h3>
+      </div>
+
+      <div class="swiper-container review-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide review-item">
+            <img src="img/r-1.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="sarah-comment">
+              “Somon delivered our frontend project ahead of schedule and with
+              outstanding quality. His attention to UX and clean code made
+              integration seamless for our team. Highly recommended!”
+            </p>
+
+            <div class="person-info">
+              <h3 data-key="sarah-johnson">Sarah Johnson</h3>
+              <h5 data-key="project-manager">Project Manager</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-2.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="david-comment">
+              "Working with Somon was effortless. He instantly understood my
+              wireframes and brought them to life with perfect pixel
+              implementation. A rare talent in frontend development."
+            </p>
+            <div class="person-info">
+              <h3 data-key="david-lee">David Lee</h3>
+              <h5 data-key="ux-ui">UX/UI Designer</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-3.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="laura-comment">
+              "Excellent communication, strong frontend skills and honest
+              approach. Highly recommended."
+            </p>
+            <div class="person-info">
+              <h3 data-key="laura-smith">Laura Smith</h3>
+              <h5 data-key="web-strategist">Web Strategist</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-4.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="nasim-comment">
+              "Somon wrote clean, modular code that was easy to integrate into
+              our backend. His Git commits were organized and well-documented. A
+              true professional!"
+            </p>
+            <div class="person-info">
+              <h3 data-key="nasim-karimzoda">Nasim Karimzoda</h3>
+              <h5 data-key="backend-developer">Backend Developer</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-5.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="farzona-comment">
+              “Somon built a beautiful landing page for our latest campaign.
+              Fast, responsive, SEO-friendly — and exactly on brand. We’ll
+              definitely work with him again.”
+            </p>
+            <div class="person-info">
+              <h3 data-key="farzona-karimova">Farzona Karimova</h3>
+              <h5 data-key="marketing-lead">Marketing Lead</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-6.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="jason-comment">
+              “He took our Figma designs and turned them into a live app in
+              record time. His responsiveness and flexibility made him a
+              favorite among our dev team.”
+            </p>
+            <div class="person-info">
+              <h3 data-key="jason-kim">Jason Kim</h3>
+              <h5 data-key="product-manager">Product Manager</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-7.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="isabella-comment">
+              “Somon brought our design vision to life with elegance and
+              precision. His ability to translate creative ideas into responsive
+              and fast-loading pages was truly impressive.”
+            </p>
+            <div class="person-info">
+              <h3 data-key="isabella-moore">Isabella Moore</h3>
+              <h5 data-key="creative-director">Creative Director</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-item">
+            <img src="img/r-8.png" alt="Client Photo" />
+            <i class="fas fa-quote-left"></i>
+            <p class="comment" data-key="ethan-comment">
+              "I was impressed by his front-end development skills and
+              structured code. He writes like an engineer but thinks like a
+              designer - a rare combination that every team needs."
+            </p>
+            <div class="person-info">
+              <h3 data-key="ethan-brooks">Ethan Brooks</h3>
+              <h5 data-key="lead-developer">Lead Developer</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section end -->
+
+    <!-- contact section start -->
+
+    <section class="contact" id="contact">
+      <div class="heading">
+        <h3 data-key="contact-me">Contact Me</h3>
+      </div>
+
+      <div class="box-container"></div>
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="detail">
+            <div class="detail">
+              <i class="fab fa-Instagram"></i>
+              <a
+                href="https://www.instagram.com/somon7650k/"
+                target="_blank"
+              ></a>
+            </div>
+          </div>
+          <div class="info-item">
+            <h4></h4>
+            <div class="detail">
+              <i class="fab fa-githup"></i>
+              <a href="https://github.com/Somon1998" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+
+        <form action="#" class="contact-form">
+          <input
+            type="text"
+            name="name"
+            class="box"
+            id="name"
+            data-key="placeholder-name"
+            placeholder="Name"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="email"
+            name="email"
+            class="box"
+            id="email"
+            data-key="placeholder-email"
+            placeholder="Email"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            name="subject"
+            class="box"
+            id="subject"
+            data-key="placeholder-subject"
+            placeholder="Subject"
+            required
+            autocomplete="off"
+          />
+          <textarea
+            name="comment"
+            id="comment"
+            class="box"
+            data-key="placeholder-message"
+            placeholder="Message"
+            required
+            autocomplete="off"
+          ></textarea>
+          <button type="submit" class="btn" data-key="send-message">
+            Send message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- contact section end -->
+
+    <!-- footer start -->
+
+    <footer>
+      <div class="social">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/Somon.Backend?locale=ru_RU"
+          class="fab fa-facebook"
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/somon7650k/"
+          class="fab fa-instagram"
+        ></a>
+        <a
+          target="_blank"
+          href="https://github.com/Somon1998"
+          class="fab fa-github"
+        ></a>
+      </div>
+      <div class="copyright">
+        <p>
+          <span data-key="created-by">Created by</span>
+          <span data-key="somon-karimzoda">Somon Karimzoda</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <!-- jQuery link js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- magnific popup js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
+
+    <!-- swiper js link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+    <!-- custom script js -->
+    <script src="script.js"></script>
+  </body>
+</html>
